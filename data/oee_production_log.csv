@@ -1,0 +1,3 @@
+date,shift,line_id,product_id,planned_time_min,run_time_min,downtime_min,downtime_reason,total_units,good_units,scrap_units
+2025-08-01,A,L1_UHT,LEITE_UHT_1L,480,445,35,setup,33000,32340,660
+2025-08-01,B,L2_PAST,LEITE_PAST_1L,480,430,50,manutencao,28000,27160,840
