@@ -1,7 +1,7 @@
 # Script de Simulação de Dados de OEE para Linha de Envase de Leite
 
 **Autor:** Carlos Augusto Freitas Silva  
-**Data:** 13/08/2025  
+**Data:** 17/07/2025  
 **Versão:** 1.0
 
 ---
@@ -28,24 +28,6 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
 - **RSQLite** → Criação e manipulação do banco SQLite
 - **dplyr** → Manipulação e transformação de dados
 - **lubridate** → Manipulação de datas
-
----
-
-## 📂 Estrutura de Pastas Recomendada
-
-```
-seu-repo/
-│
-├── data/                      # Dados simulados
-│   ├── oee_prototipo_leite.csv
-│   ├── oee_prototipo_leite.db
-│
-├── docs/                      # Documentação e scripts
-│   ├── script_simulacao_oee.R
-│   ├── README_script.md
-│
-├── README.md                  # Descrição geral do projeto
-```
 
 ---
 
