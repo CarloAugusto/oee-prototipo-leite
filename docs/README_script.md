@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Objetivo
+## Objetivo
 
 Este script tem como objetivo **gerar dados simulados de produção** para uma linha de envase de leite, calcular os indicadores de **OEE (Overall Equipment Effectiveness)** — *Disponibilidade*, *Performance* e *Qualidade* — e salvar os resultados em:
 
@@ -17,7 +17,7 @@ Esses arquivos podem ser utilizados para visualização e análise no **Power BI
 
 ---
 
-## 🛠 Dependências
+## Dependências
 
 O script utiliza as seguintes bibliotecas R:
 
@@ -31,7 +31,7 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
 
 ---
 
-## 🔄 Fluxo do Script
+## Fluxo do Script
 
 1. **Definição de parâmetros fixos**
    - Tempo de turno (`480` min = 8h)
@@ -64,7 +64,7 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
 
 ---
 
-## 📊 Exemplo de Saída
+## Exemplo de Saída
 
 | Data       | Turno  | Produto           | Disponibilidade | Performance | Qualidade | OEE   | ProducaoTotal | ProducaoBoa | ProducaoDefeituosa | TempoReal | Paradas |
 |------------|--------|-------------------|-----------------|-------------|-----------|-------|---------------|-------------|--------------------|-----------|---------|
@@ -73,7 +73,7 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 1. **Clonar o repositório**:
    ```bash
@@ -85,7 +85,7 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
 
 ---
 
-## 📌 Observações
+## Observações
 - O `.db` é um **arquivo SQLite**, ou seja, um banco de dados relacional em SQL armazenado localmente.
 - Os valores gerados são **simulados** e não representam dados reais de produção.
 - É possível alterar o número de dias simulados modificando:
