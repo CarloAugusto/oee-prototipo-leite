@@ -53,9 +53,7 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
 
 4. **Cálculo dos indicadores OEE**
    - **Disponibilidade** = Tempo Real de Produção / Tempo Planejado  
-     \[
-     \text{Disponibilidade} = \frac{TempoPlanejado - ParadasNaoPlanejadas}{TempoPlanejado}
-     \]
+     [\text{Disponibilidade} = \frac{TempoPlanejado - ParadasNaoPlanejadas}{TempoPlanejado}\]
    - **Performance** = Produção Total / Produção Teórica Possível  
      \[
      \text{Performance} = \frac{\text{ProducaoTotal}}{\text{TempoReal} \times \text{VelocidadeTeorica}}
