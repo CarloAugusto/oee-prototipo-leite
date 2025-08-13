@@ -1,10 +1,10 @@
-Contexto
+# Contexto
 A planta de lácteos (UHT e pasteurização) tem baixa previsibilidade e dificuldade em priorizar causas de perda. Indicadores ficam dispersos em planilhas/apontamentos manuais, atrasando decisões de manutenção, qualidade e engenharia.
 
-Problema de negócio
+# Problema de negócio
 Não há um painel único que consolide OEE por linha/turno/produto, destaque TOP 5 motivos de parada e estime ganho potencial ao reduzir as principais perdas.
 
-Objetivo do protótipo
+# Objetivo do protótipo
 Entregar um Power BI reprodutível com:
 
 Cálculo padronizado de A/P/Q e OEE;
