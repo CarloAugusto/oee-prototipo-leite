@@ -52,16 +52,9 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
    - Uso de `lapply()` para repetir a função em cada data
 
 4. **Cálculo dos indicadores OEE**
-   - **Disponibilidade** = Tempo Real de Produção / Tempo Planejado  
-     [\text{Disponibilidade} = \frac{TempoPlanejado - ParadasNaoPlanejadas}{TempoPlanejado}\]
-   - **Performance** = Produção Total / Produção Teórica Possível  
-     \[
-     \text{Performance} = \frac{\text{ProducaoTotal}}{\text{TempoReal} \times \text{VelocidadeTeorica}}
-     \]
-   - **Qualidade** = Produção Boa / Produção Total  
-     \[
-     \text{Qualidade} = \frac{\text{ProducaoBoa}}{\text{ProducaoTotal}}
-     \]
+   - **Disponibilidade** = Tempo Real de Produção / Tempo Planejado 
+   - **Performance** = Produção Total / Produção Teórica Possível       
+   - **Qualidade** = Produção Boa / Produção Total 
    - **OEE** = Disponibilidade × Performance × Qualidade
 
 5. **Exportação**
