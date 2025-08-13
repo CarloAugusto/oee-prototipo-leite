@@ -73,18 +73,6 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
 
 ---
 
-## Como Executar
-
-1. **Clonar o repositório**:
-   ```bash
-   git clone https://github.com/usuario/seu-repo.git
-   ```
-2. **Abrir o script no RStudio**
-3. **Executar todas as linhas**
-4. Os arquivos serão salvos em `data/` prontos para uso no Power BI ou qualquer ferramenta de análise.
-
----
-
 ## Observações
 - O `.db` é um **arquivo SQLite**, ou seja, um banco de dados relacional em SQL armazenado localmente.
 - Os valores gerados são **simulados** e não representam dados reais de produção.
