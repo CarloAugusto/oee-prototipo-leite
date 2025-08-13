@@ -1,43 +1,33 @@
-# OEE – Protótipo (Lácteos) · Power BI
+Contexto
+A planta de lácteos (UHT e pasteurização) tem baixa previsibilidade e dificuldade em priorizar causas de perda. Indicadores ficam dispersos em planilhas/apontamentos manuais, atrasando decisões de manutenção, qualidade e engenharia.
 
-**Protótipo reprodutível** com **dados simulados** para cálculo de OEE (Overall Equipment Effectiveness) e análise de perdas.
+Problema de negócio
+Não há um painel único que consolide OEE por linha/turno/produto, destaque TOP 5 motivos de parada e estime ganho potencial ao reduzir as principais perdas.
 
-## Objetivo
-Consolidar **A/P/Q** e **OEE** por data/turno/linha/produto; ranquear **TOP 5 paradas**; simular **ganho de OEE**.
+Objetivo do protótipo
+Entregar um Power BI reprodutível com:
 
-## Estrutura
-```
-oee-prototipo-leite/
-├─ data/
-│  ├─ oee_production_log.csv
-│  └─ oee_products.csv
-├─ docs/
-│  ├─ prints/
-│  └─ onepager.pdf
-├─ pbix/
-│  └─ OEE_Prototipo.pbix
-├─ README.md
-└─ LICENSE
-```
+Cálculo padronizado de A/P/Q e OEE;
 
-## DAX (sugestão)
-```
-Planned Time (min) = SUM(Log[planned_time_min])
-Run Time (min)     = SUM(Log[run_time_min])
-Downtime (min)     = SUM(Log[downtime_min])
+Pareto de downtime com drill-down por motivo;
 
-Total Units = SUM(Log[total_units])
-Good Units  = SUM(Log[good_units])
-Scrap Units = SUM(Log[scrap_units])
+Cenário de redução do maior motivo (parâmetro) e cálculo do ∆OEE;
 
-Theoretical Units =
-SUMX(
-    Log,
-    ( Log[run_time_min] * 60.0 ) / RELATED(Products[ideal_cycle_time_sec])
-)
+Políticas documentadas (o que entra como downtime, janelas excluídas, ciclo ideal por produto).
 
-Availability = DIVIDE([Run Time (min)],[Planned Time (min)])
-Performance  = DIVIDE([Total Units],[Theoretical Units])
-Quality      = DIVIDE([Good Units],[Total Units])
-OEE          = [Availability] * [Performance] * [Quality]
-```
+Dados & escopo
+
+Simulados por data × turno × linha × produto (data/oee_production_log.csv) + ciclo ideal por produto (data/oee_products.csv).
+
+Métricas: Availability = RunTime/PlannedTime; Performance = TotalUnits/TheoreticalUnits; Quality = Good/Total;
+OEE = Availability × Performance × Quality.
+
+Critérios de sucesso
+
+Visualizar tendência de OEE diário por linha/turno;
+
+Identificar TOP 5 perdas em ≤ 3 cliques;
+
+Estimar ganho de OEE com redução de X% no maior motivo;
+
+README com regras de cálculo e premissas.
