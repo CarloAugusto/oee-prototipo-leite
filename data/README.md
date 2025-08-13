@@ -1,1 +1,0 @@
-dados simulados; ver README
