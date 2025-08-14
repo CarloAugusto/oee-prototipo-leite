@@ -84,3 +84,54 @@ install.packages(c("RSQLite", "dplyr", "lubridate"))
   ```r
   VELOCIDADE_TEORICA_CAIXAS_MIN <- 120
   ```
+  Observações sobre importação no Power BI
+
+O arquivo .csv gerado utiliza ponto (.) como separador decimal (padrão americano), e não vírgula.
+
+Se o Power BI estiver configurado para Português (Brasil), essas colunas decimais podem ser interpretadas de forma incorreta como números inteiros (por exemplo: 0.9562 sendo lido como 9562).
+
+Isso afeta especialmente as variáveis:
+
+Disponibilidade
+
+Performance
+
+Qualidade
+
+OEE
+Todas variando de 0.0 a 1.0.
+
+Como corrigir no Power BI
+
+Durante a importação, desative a detecção automática de tipos de dados:
+
+Em Opções → Opções globais → Dados de carregamento, desmarque Detectar tipo e cabeçalhos de coluna para arquivos de texto/csv.
+
+Isso garante que você fará a conversão manualmente no Power Query.
+
+Método 1 — Ajustar a localidade da coluna:
+
+No Power Query, selecione as colunas problemáticas.
+
+Botão direito → Alterar tipo → Usar configurações de localidade.
+
+Tipo de dados: Decimal número
+Localidade: Inglês (Estados Unidos).
+
+Isso converte 0.9562 para 0,9562 respeitando a configuração regional.
+
+Método 2 — Substituir ponto por vírgula:
+
+No Power Query, selecione a coluna.
+
+Transformar → Substituir valores → substituir "." por ",".
+
+Depois, alterar o tipo para decimal normalmente.
+
+Método 3 — Alterar idioma do Power BI para Inglês (EUA):
+
+Arquivo → Opções e configurações → Opções → Regional Settings.
+
+Defina o idioma/locale para Inglês (Estados Unidos).
+
+Isso faz o Power BI interpretar o ponto como decimal nativamente.
