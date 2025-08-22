@@ -77,3 +77,6 @@ Passo 4: Publicar e Documentar no GitHub
         Pasta imagens: Tire prints do seu dashboard finalizado e coloque aqui, exibindo-os no README.md.
     Publicar o Power BI: Use a função "Publicar na Web" do Power BI para gerar um link público e incorporável do seu dashboard. Atenção: Use apenas dados fictícios, pois este link será público.
 
+<img width="937" height="523" alt="image" src="https://github.com/user-attachments/assets/a84772cc-e2ff-413a-8765-b1119859f80f" />
+
+
